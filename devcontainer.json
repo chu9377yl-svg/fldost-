@@ -1,0 +1,9 @@
+{
+  "name": "Semantic Shift Finder",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "hostRequirements": { "cpus": 4, "memory": "16gb" },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postAttachCommand": "streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false",
+  "forwardPorts": [8501],
+  "portsAttributes": { "8501": { "label": "App", "onAutoForward": "openBrowser" } }
+}
